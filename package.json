@@ -1,0 +1,22 @@
+{
+  "name": "did_he_tweet",
+  "version": "1.0.0",
+  "description": "## Waffle https://waffle.io/simplton/didHeTweet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplton/didHeTweet.git"
+  },
+  "keywords": [
+    "didhetweet"
+  ],
+  "author": "Roni Vegh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simplton/didHeTweet/issues"
+  },
+  "homepage": "https://github.com/simplton/didHeTweet#readme"
+}
