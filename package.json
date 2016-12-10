@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/babel-node  index.js",
+    "start": "node  index.js",
     "locdev": "nodemon index.js"
   },
   "repository": {
@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/simplton/didHeTweet#readme",
   "dependencies": {
-    "babel": "^6.5.2",
     "express": "^4.14.0"
   },
   "devDependencies": {
