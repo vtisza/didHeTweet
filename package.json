@@ -4,7 +4,8 @@
   "description": "## Waffle https://waffle.io/simplton/didHeTweet",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/simplton/didHeTweet/issues"
   },
-  "homepage": "https://github.com/simplton/didHeTweet#readme"
+  "homepage": "https://github.com/simplton/didHeTweet#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
