@@ -10,7 +10,9 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div id="hello">
-      {{ message }}
+      {{ message }} and here is a number {{ number }}
+      <button v-on:click="randomMsg">Random Message</button>
+        <p v-if="evenNumber">You can see me</p>
     </div>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script type="text/javascript" src="src/app.js"></script>
