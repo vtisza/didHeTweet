@@ -2,7 +2,7 @@ const hello = new Vue({
   el: '#hello',
   data: {
     message: 'Hello World!',
-    number: 12,
+    number: 42,
     evenNumber: false,
   },
   methods: {
