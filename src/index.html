@@ -9,10 +9,49 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div id="hello">
-      {{ message }} and here is a number {{ number }}
-      <button v-on:click="randomMsg">Random Message</button>
+    <div id="header">
+      <p>I am <i>Heather</i>, small evergreen shrub</p>
+    </div>
+    <div id="main" class="inline-block-center">
+      <div id="hello">
+        {{ message }} and here is a number {{ number }}
+        <button v-on:click="randomMsg">Random Message</button>
         <p v-if="evenNumber">You can see me</p>
+      </div>
+      <div id="pastTweets">
+        <table>
+          <tr>
+            <td>Last 5 minutes</td>
+            <td>{{ five }}</td>
+          </tr>
+          <tr>
+            <td>Last 10 minutes</td>
+            <td>{{ ten }}</td>
+          </tr>
+          <tr>
+            <td>Last hour</td>
+            <td>{{ hour }}</td>
+          </tr>
+          <tr>
+            <td>Today</td>
+            <td>{{ today }}</td>
+          </tr>
+        </table>
+        <h3>That is {{ totalTweets }} number of tweets in total!
+          That is {{ daysAvg }} / day
+          <i title="account created at 6:46 AM 18 Mar 2009">on average</i>
+        </h3>
+        <table>
+          <tr>
+            <td>Tweets today:</td>
+            <td>{{ todayT }}</td>
+          </tr>
+          <tr>
+            <td>Tweets this week:</td>
+            <td>{{ weekT }}</td>
+          </tr>
+        </table>
+      </div>
     </div>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script type="text/javascript" src="src/app.js"></script>
