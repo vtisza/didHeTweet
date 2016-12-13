@@ -29,7 +29,7 @@ const pastT = new Vue({
       let startD = new Date(18/3/2009)
       let endD = new Date()
       let timeDiff = Math.abs(startD.getTime() - endD.getTime())
-      return Math.round(this.totalTweets / Math.ceil(timeDiff / (1000 * 3600 * 24)))
+      return Math.round(this.totalTweets / Math.ceil(timeDiff / (1000 * 3600 * 24)) * 100) / 100
     }
   }
 })
