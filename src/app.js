@@ -16,10 +16,10 @@ const hello = new Vue({
 const pastT = new Vue({
   el: '#pastTweets',
   data: {
-    five: "no",
-    ten: "yes",
-    hour: "yes",
-    today: "yes",
+    five: false,
+    ten: false,
+    hour: true,
+    today: true,
     totalTweets: 34124,
     todayT: 3,
     weekT: 16,

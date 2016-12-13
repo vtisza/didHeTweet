@@ -24,19 +24,23 @@
         <table>
           <tr>
             <td>Last 5 minutes</td>
-            <td>{{ five }}</td>
+            <td v-if="five">Yes</td>
+            <td v-else="five">No</td>
           </tr>
           <tr>
             <td>Last 10 minutes</td>
-            <td>{{ ten }}</td>
+            <td v-if="ten">Yes</td>
+            <td v-else="ten">No</td>
           </tr>
           <tr>
             <td>Last hour</td>
-            <td>{{ hour }}</td>
+            <td v-if="hour">Yes</td>
+            <td v-else="hour">No</td>
           </tr>
           <tr>
             <td>Today</td>
-            <td>{{ today }}</td>
+            <td v-if="today">Yes</td>
+            <td v-else="today">No</td>
           </tr>
         </table>
         <h3>That is {{ totalTweets }} number of tweets in total!
