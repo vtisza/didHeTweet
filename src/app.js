@@ -1,18 +1,3 @@
-const hello = new Vue({
-  el: '#hello',
-  data: {
-    message: 'Hello World!',
-    number: 42,
-    evenNumber: false,
-  },
-  methods: {
-    randomMsg: function () {
-      this.number = Math.round(Math.random() * 100)
-      this.evenNumber = !(this.evenNumber)
-    }
-  }
-})
-
 const pastT = new Vue({
   el: '#pastTweets',
   data: {
@@ -20,7 +5,8 @@ const pastT = new Vue({
     ten: true,
     hour: true,
     today: false,
-    totalTweets: 34124,
+    totalTweets: 0,
+    totalTweetsAnim: 0,
     todayT: 3,
     weekT: 16,
   },
@@ -47,6 +33,23 @@ const pastT = new Vue({
       let endD = new Date()
       let timeDiff = Math.abs(startD.getTime() - endD.getTime())
       return Math.round(this.totalTweets / Math.ceil(timeDiff / (1000 * 3600 * 24)) * 100) / 100
+    }
+  },
+  watch: {
+    totalTweets: function(newValue, oldValue) {
+      var vm = this
+      function animate (time) {
+        requestAnimationFrame(animate)
+        TWEEN.update(time)
+      }
+      new TWEEN.Tween({ tweeningNumber: oldValue })
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .to({ tweeningNumber: newValue }, 2000)
+        .onUpdate(function () {
+          vm.totalTweetsAnim = this.tweeningNumber.toFixed(0)
+        })
+        .start()
+      animate()
     }
   }
 })
