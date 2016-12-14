@@ -16,13 +16,30 @@ const hello = new Vue({
 const pastT = new Vue({
   el: '#pastTweets',
   data: {
-    five: false,
-    ten: false,
+    five: true,
+    ten: true,
     hour: true,
-    today: true,
+    today: false,
     totalTweets: 34124,
     todayT: 3,
     weekT: 16,
+  },
+  created: function () {
+    this.tweetsWhen()
+  },
+  methods: {
+    tweetsWhen() {
+      this.$http.get('/api/maxtweets')
+      .then(function(res){
+        this.totalTweets = JSON.parse(res.body)[0]
+        this.five = JSON.parse(res.body)[1].in_five_min === "False" ? false : true;
+        this.ten = JSON.parse(res.body)[1].in_ten_min === "False" ? false : true;
+        this.hour = JSON.parse(res.body)[1].last_hour === "False" ? false : true;
+        this.today = JSON.parse(res.body)[1].today === "False" ? false : true;
+      }, function(err){
+        throw err
+      })
+    }
   },
   computed: {
     daysAvg: function () {

@@ -4,9 +4,29 @@ const express = require('express');
 const app = express();
 const server = require('http').createServer(app);
 const port = process.env.PORT;
-const Twitter = require('twitter')
+const Twitter = require('twitter');
+const request = require('request');
+
+let myLittle = [999, {"in_five_min": "False", "in_ten_min": "False", "last_hour":"False","today":"True"}]
 
 app.use(express.static(__dirname + '/'));
+
+app.get('/api/maxtweets', function (req, res) {
+  request('http://vtisza.pythonanywhere.com/get_trump_count', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    myLittle[0] = JSON.parse(body) // Show the HTML for the Google homepage.
+
+    request('http://vtisza.pythonanywhere.com/last_trump_time', function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        myLittle[1] = JSON.parse(body) // Show the HTML for the Google homepage.
+        res.send(JSON.stringify(myLittle))
+      }
+    })
+  }
+})
+
+  // res.send(JSON.stringify(myLittle))
+})
 
 app.get('/', function (req, res) {
   res.sendfile('src/index.html');
