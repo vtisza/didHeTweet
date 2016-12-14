@@ -15,11 +15,7 @@
       <p>I am <i>Heather</i>, small evergreen shrub</p>
     </div>
     <div id="main" class="inline-block-center">
-      <div id="hello">
-        {{ message }} and here is a number {{ number }}
-        <button v-on:click="randomMsg">Random Message</button>
-        <p v-if="evenNumber">You can see me</p>
-      </div>
+      <h1>Did he tweet?</h1>
       <div id="pastTweets">
         <table>
           <tr>
@@ -43,7 +39,7 @@
             <td v-else="today">No</td>
           </tr>
         </table>
-        <h3>That is {{ totalTweets }} number of tweets in total!
+        <h3>That is {{ totalTweetsAnim }} number of tweets in total!
           That is {{ daysAvg }} / day
           <i title="account created at 6:46 AM 18 Mar 2009">on average</i>
         </h3>
@@ -61,6 +57,7 @@
     </div>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+    <script src="https://unpkg.com/tween.js@16.3.4"></script>
     <script type="text/javascript" src="src/app.js"></script>
   </body>
 </html>
