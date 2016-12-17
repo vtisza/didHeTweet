@@ -29,7 +29,7 @@ app.get('/api/maxtweets', function (req, res) {
 })
 
 app.get('/', function (req, res) {
-  res.sendfile('src/index.html');
+  res.sendFile('src/index.html', {root: __dirname});
 });
 
 server.listen(port, function () {
