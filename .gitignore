@@ -38,3 +38,6 @@ jspm_packages
 
 # ENV and KEYS
 .env
+
+# OS temp
+.DS_Store
