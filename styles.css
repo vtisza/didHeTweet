@@ -25,8 +25,7 @@ body {
   text-align: left;
 }
 table {
-  width: 70vw;
-  font-size: 2vmax;
+  width: 300px;
 }
 #wcPicture {
   display: block;
@@ -35,11 +34,19 @@ table {
 h3 {
   margin-top: 18px;
   margin-bottom: 0px;
-  font-size: 2vmax;
 }
 img.resize{
    max-width:50%;
 }
-h1 {
-  font-size: 5.9vw;
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  table {
+    width: 70vw;
+    font-size: 2vmax;
+  }
+  h3 {
+    font-size: 2vmax;
+  }
+  h1 {
+    font-size: 5.9vw;
+  }
 }
