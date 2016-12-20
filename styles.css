@@ -33,7 +33,7 @@ h3 {
 
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
   table {
-    width: 70vw;
+    width: 100vw;
     font-size: 2vmax;
   }
   h3 {
@@ -43,12 +43,22 @@ h3 {
     font-size: 5.9vw;
   }
   img.resize{
-     max-width: 70%;
+     width: 90%;
+     height: auto;
   }
   #main div {
     padding: 0px;
     /*width: 300px;*/
     margin: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .float{
+    width: 100vw;
+  }
+  #wcPicture {
+    width: 95%;
+    height: auto;
   }
 }
 @media only screen and (min-width: 500px), only screen and (min-device-width: 500px) {
