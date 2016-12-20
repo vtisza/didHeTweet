@@ -12,18 +12,6 @@ body {
   margin-right: auto;
   padding: 0px;
 }
-#main div {
-  padding: 0px;
-  /*width: 300px;*/
-  margin: 0px;
-}
-.inline-block-center {
-  text-align: center;
-}
-.inline-block-center div {
-  display: inline-block;
-  text-align: left;
-}
 table {
   width: 300px;
 }
@@ -35,9 +23,14 @@ h3 {
   margin-top: 18px;
   margin-bottom: 0px;
 }
-img.resize{
-   max-width:50%;
+.inline-block-center {
+  text-align: center;
 }
+.inline-block-center div {
+  display: inline-block;
+  text-align: left;
+}
+
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
   table {
     width: 70vw;
@@ -48,5 +41,25 @@ img.resize{
   }
   h1 {
     font-size: 5.9vw;
+  }
+  img.resize{
+     max-width: 70%;
+  }
+  #main div {
+    padding: 0px;
+    /*width: 300px;*/
+    margin: 0px;
+  }
+}
+@media only screen and (min-width: 500px), only screen and (min-device-width: 500px) {
+  .float {
+    float: left;
+  }
+  /*#pastTweets {
+    margin-top: 85px;
+  }*/
+  img {
+    position: relative;
+    /*top: -20px;*/
   }
 }
