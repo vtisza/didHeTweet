@@ -11,6 +11,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0px;
+  height: 2px;
 }
 table {
   width: 300px;
@@ -30,7 +31,14 @@ h3 {
   display: inline-block;
   text-align: left;
 }
-
+p {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  width: 100%;
+  z-index: 3;
+  font-size: 1vw;
+}
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
   table {
     width: 100vw;
@@ -60,6 +68,14 @@ h3 {
     width: 95%;
     height: auto;
   }
+  p {
+    position: absolute;
+    top: -5px;
+    left: 30px;
+    width: 100%;
+    z-index: 3;
+    font-size: 1.5vmax;
+  }
 }
 @media only screen and (min-width: 500px), only screen and (min-device-width: 500px) {
   .float {
@@ -72,4 +88,69 @@ h3 {
     position: relative;
     /*top: -20px;*/
   }
+}
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  width: 80%;
+  height: 80%;
+}
+
+.modal-container {
+  width: 100%;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #000000;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: white;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: none;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
