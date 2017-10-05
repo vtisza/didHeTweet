@@ -18,3 +18,4 @@ TWITTER_ACCESS_TOKEN_KEY=''
 TWITTER_ACCESS_TOKEN_SECRET=''
 PORT=''
 ```
+Right now twitter API is not used in the Node server
