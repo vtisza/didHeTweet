@@ -3,7 +3,7 @@
 ## Deployed
 https://didhetweet.herokuapp.com/
 
-## Requirements
+## Requirements for Node
 `node` and `npm`
 need to put a `.env` file in root with the below structure
 To install all the node dependencies
@@ -21,4 +21,4 @@ PORT=''
 Right now twitter API is not used in the Node server
 
 ## Notes
-Wordcloud is created in a separate python API. It will be uploaded soon.
+Wordcloud is created in the python API (see Python folder).
