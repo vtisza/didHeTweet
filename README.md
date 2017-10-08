@@ -19,3 +19,6 @@ TWITTER_ACCESS_TOKEN_SECRET=''
 PORT=''
 ```
 Right now twitter API is not used in the Node server
+
+## Notes
+Wordcloud is created in a separate python API. It will be uploaded soon.
