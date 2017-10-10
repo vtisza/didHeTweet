@@ -41,3 +41,7 @@ jspm_packages
 
 # OS temp
 .DS_Store
+
+#ignore intelliJ settings
+.idea/
+
