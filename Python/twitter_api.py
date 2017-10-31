@@ -18,25 +18,26 @@ def last_trump_time(twitter):
 
 def get_trump_count(twitter):
     return twitter.show_user(screen_name="realdonaldtrump")["statuses_count"]
-    
+
 def color_func(word, font_size, position, orientation, random_state=None, **kwargs):
     return tuple(YlGnBu_9.colors[random.randint(2,8)])
-    
-def trump_wc(twitter):    
-    d = path.dirname(__file__)   
+
+def trump_wc(twitter):
+    d = path.dirname(__file__)
     tweets=twitter.get_user_timeline(screen_name="realdonaldtrump", count=20000)
     tweets=" ".join([tweet['text'] for tweet in tweets])
     tweets = " ".join([word for word in tweets.split()
                             if 'http' not in word
                                 and not word.startswith('@')
                                 and word != 'RT'
+                                and 'imp' not in word
                             ])
     trump_mask = imread(path.join(d, "wh1.png"), flatten=True)
     stopwords = set(STOPWORDS)
-    wc = WordCloud(background_color="black", max_words=2000, mask=trump_mask, 
+    wc = WordCloud(background_color="black", max_words=2000, mask=trump_mask,
                    stopwords=stopwords)
     # generate word cloud
-    wc.generate(tweets) 
+    wc.generate(tweets)
     wc.recolor(color_func=color_func, random_state=3)
     # store to file
     wc.to_file(path.join(d, "trump_wc.png"))
