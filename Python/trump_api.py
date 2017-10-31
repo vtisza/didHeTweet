@@ -6,6 +6,7 @@ from flask import Flask, send_file
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 app = Flask(__name__)
 
+#use your api key here
 APP_KEY = ''
 APP_SECRET = ''
 twitter = Twython(APP_KEY, APP_SECRET, oauth_version=2)
