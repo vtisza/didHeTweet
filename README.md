@@ -7,6 +7,7 @@ https://didhetweet.herokuapp.com/
 `node` and `npm`
 need to put a `.env` file in root with the below structure
 To install all the node dependencies
+Use your own twitter api key
 ```
 npm install
 ```
