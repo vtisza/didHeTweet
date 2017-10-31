@@ -7,11 +7,7 @@ import matplotlib.pyplot as plt
 import random
 from palettable.colorbrewer.sequential import Blues_9, YlGnBu_9
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
-#APP_KEY = ''
-#APP_SECRET = ''
-#twitter = Twython(APP_KEY, APP_SECRET, oauth_version=2)
-#ACCESS_TOKEN = twitter.obtain_access_token()
-#twitter = Twython(APP_KEY, access_token=ACCESS_TOKEN)
+
 
 def last_trump_time(twitter):
     created=twitter.get_user_timeline(screen_name="realdonaldtrump", count=1)[0]['created_at']
