@@ -1,6 +1,7 @@
 # didHeTweet
 
 ## Deployed
+(API for the actual numbers may or may not be up...)
 https://didhetweet.herokuapp.com/
 
 ## Requirements for Node
