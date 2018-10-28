@@ -16,8 +16,8 @@ def last_trump_time(twitter):
     return('{{"time": "{}", "in_five_min": "{}", "in_ten_min": "{}", "last_hour":"{}","today":"{}"}}'.
         format(created,str(timediff<5),str(timediff<10),str(timediff<60),str(timediff<1440)))
 
-def get_trump_count(twitter):
-    return twitter.show_user(screen_name="realdonaldtrump")["statuses_count"]
+def get_trump_count(twitter, name="realdonaldtrump"):
+    return twitter.show_user(screen_name=name)["statuses_count"]
 
 def color_func(word, font_size, position, orientation, random_state=None, **kwargs):
     return tuple(YlGnBu_9.colors[random.randint(2,8)])
