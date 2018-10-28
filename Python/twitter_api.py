@@ -34,7 +34,7 @@ def trump_wc(twitter):
                             ])
     trump_mask = imread(path.join(d, "wh1.png"), flatten=True)
     stopwords = set(STOPWORDS)
-    wc = WordCloud(background_color="black", max_words=2000, mask=trump_mask,
+    wc = WordCloud(background_color="black", max_words=1750, mask=trump_mask,
                    stopwords=stopwords)
     # generate word cloud
     wc.generate(tweets)
