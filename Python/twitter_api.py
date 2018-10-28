@@ -38,6 +38,6 @@ def trump_wc(twitter):
                    stopwords=stopwords)
     # generate word cloud
     wc.generate(tweets)
-    wc.recolor(color_func=color_func, random_state=3)
+    wc.recolor(color_func=color_func, random_state=22)
     # store to file
     wc.to_file(path.join(d, "trump_wc.png"))
