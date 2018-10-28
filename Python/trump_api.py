@@ -1,3 +1,5 @@
+#flask server code for the API
+
 import twitter_api as ta
 import os
 import time

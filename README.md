@@ -24,3 +24,4 @@ Right now twitter API is not used in the Node server
 
 ## Notes
 Wordcloud is created in the python API (see Python folder).
+Currently pythonanywhere.com is used for the flask API.
