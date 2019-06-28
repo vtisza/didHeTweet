@@ -9,8 +9,8 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 app = Flask(__name__)
 
 #use your api key here
-APP_KEY = ''
-APP_SECRET = ''
+APP_KEY = os.environ["API_KEY"]
+APP_SECRET = os.environ["APP_SECRET"]
 twitter = Twython(APP_KEY, APP_SECRET, oauth_version=2)
 ACCESS_TOKEN = twitter.obtain_access_token()
 twitter = Twython(APP_KEY, access_token=ACCESS_TOKEN)
@@ -28,12 +28,12 @@ def get_trump_count():
 #Wordcloud API    
 @app.route('/trump_wc')
 def trump_wc():
-    file_mod_time = round(os.stat('trump_wc.png').st_mtime)
-    last_time = round((int(time.time()) - file_mod_time) / 60, 2)
-    if last_time>(60*24):
-        ta.trump_wc(twitter) 
+#    file_mod_time = round(os.stat('/trump_wc.png').st_mtime)
+#    last_time = round((int(time.time()) - file_mod_time) / 60, 2)
+#    if last_time>(60*24):
+    ta.trump_wc(twitter) 
     return send_file('trump_wc.png', mimetype='image/png')
-    
 
 if __name__ == "__main__":
-    app.run()
+    port = os.environ.get('PORT', 5500)
+    app.run(host='0.0.0.0', port=port)
