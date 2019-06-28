@@ -1,0 +1,1 @@
+"start": { "postinstall": "cd Node && npm install" }
