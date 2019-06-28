@@ -1,0 +1,8 @@
+flask
+matplotlib
+palettable
+Pillow
+scipy
+twitter_api
+twython
+wordcloud

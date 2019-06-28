@@ -1,7 +1,7 @@
 from twython import Twython
 import time
 from os import path
-from scipy.misc import imread
+from matplotlib.pyplot import imread
 import numpy as np
 import matplotlib.pyplot as plt
 import random
@@ -32,7 +32,7 @@ def trump_wc(twitter):
                                 and word != 'RT'
                                 and 'imp' not in word
                             ])
-    trump_mask = imread(path.join(d, "wh1.png"), flatten=True)
+    trump_mask = imread(path.join(d, "wh1.png"), 0)
     stopwords = set(STOPWORDS)
     wc = WordCloud(background_color="black", max_words=1750, mask=trump_mask,
                    stopwords=stopwords)
