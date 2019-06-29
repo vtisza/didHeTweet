@@ -5,13 +5,16 @@ USER root
 ENV API_KEY=$API_KEY
 ENV APP_SECRET=$APP_SECRET
 
+RUN sudo apt-get install nodejs
 COPY ./requirements.txt /var/www/requirements.txt
 RUN pip install -r /var/www/requirements.txt
 
-COPY ./app /app
-WORKDIR /app
+COPY ./Python /Python
+COPY ./Node /Node
+COPY ./package.json /
 
-RUN export FLASK_APP=trump_api.py
+RUN sudo npm install
+WORKDIR /Python/app
 
 ENTRYPOINT ["python"]
 CMD ["trump_api.py"]

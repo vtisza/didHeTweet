@@ -35,5 +35,5 @@ def trump_wc():
     return send_file('trump_wc.png', mimetype='image/png')
 
 if __name__ == "__main__":
-    port = os.environ.get('PORT', 5500)
+    port = 9000
     app.run(host='0.0.0.0', port=port)

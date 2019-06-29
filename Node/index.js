@@ -12,11 +12,11 @@ let myLittle = [999, {"in_five_min": "False", "in_ten_min": "False", "last_hour"
 app.use(express.static(__dirname + '/'));
 
 app.get('/api/maxtweets', function (req, res) {
-  request('https://trumpapi.herokuapp.com/get_trump_count', function (error, response, body) {
+  request('http://localhost:9000/get_trump_count', function (error, response, body) {
   if (!error && response.statusCode == 200) {
     myLittle[0] = JSON.parse(body) // Show the HTML for the Google homepage.
 
-    request('https://trumpapi.herokuapp.com/last_trump_time', function (error, response, body) {
+    request('http://localhost:9000/last_trump_time', function (error, response, body) {
       if (!error && response.statusCode == 200) {
         myLittle[1] = JSON.parse(body) // Show the HTML for the Google homepage.
         res.send(JSON.stringify(myLittle))
