@@ -26,7 +26,7 @@ def trump_wc(twitter):
     d = path.dirname(__file__)
     tweets=twitter.get_user_timeline(screen_name="realdonaldtrump", count=20000)
     tweets=" ".join([tweet['text'] for tweet in tweets])
-    tweets = " ".join([word for word in tweets.split()
+    tweets = " ".join([word for word in tweets.split().split("&").split("&amp")
                             if 'http' not in word
                                 and not word.startswith('@')
                                 and word != 'RT'
