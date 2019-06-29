@@ -20,4 +20,4 @@ COPY ./run.sh /
 
 RUN npm install
 
-CMD ["/run.sh"]
+CMD ["/bin/bash", "-c", "set -e && /run.sh"]
