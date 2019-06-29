@@ -31,9 +31,11 @@ def trump_wc(twitter):
                                 and not word.startswith('@')
                                 and word != 'RT'
                                 and 'imp' not in word
+                                and word != '&'
+                                and word != 'amp'
                             ])
     trump_mask = imread(path.join(d, "wh1.png"), 0)
-    stopwords = set(STOPWORDS).add("amp").add("&amp")  
+    stopwords = set(STOPWORDS).add("amp").add("&amp").add("&")
     wc = WordCloud(background_color="black", max_words=1750, mask=trump_mask,
                    stopwords=stopwords)
     # generate word cloud
