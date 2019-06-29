@@ -5,7 +5,7 @@ USER root
 ENV API_KEY=$API_KEY
 ENV APP_SECRET=$APP_SECRET
 
-RUN apt-get install nodejs
+RUN pkg install node
 COPY ./requirements.txt /var/www/requirements.txt
 RUN pip install -r /var/www/requirements.txt
 
