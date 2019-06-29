@@ -13,7 +13,7 @@ COPY ./Python /Python
 COPY ./Node /Node
 COPY ./package.json /
 
-RUN sudo npm install
+RUN npm install
 WORKDIR /Python/app
 
 ENTRYPOINT ["python"]
