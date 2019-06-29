@@ -20,4 +20,4 @@ COPY ./run.sh /
 
 RUN npm install
 
-ENTRYPOINT ["/run.sh"]
+CMD ["/run.sh"]
