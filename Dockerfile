@@ -16,9 +16,8 @@ RUN pip install -r /var/www/requirements.txt
 COPY ./Python /Python
 COPY ./Node /Node
 COPY ./package.json /
+COPY ./run.sh /
 
 RUN npm install
-WORKDIR /Python/app
 
-ENTRYPOINT ["python"]
-CMD ["trump_api.py"]
+ENTRYPOINT ["/run.sh"]
