@@ -23,5 +23,8 @@ PORT=''
 ```
 Right now twitter API is not used in the Node server
 
+## Requirements for python API
+Docker
+
 ## Notes
 Wordcloud is created in the python API (see Python folder).
