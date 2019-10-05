@@ -1,7 +1,7 @@
 {
 	"name": "did_he_tweet",
 	"version": "1.0.0",
-	"description": "## Waffle https://waffle.io/simplton/didHeTweet",
+	"description": "Visualisation of Trumps tweets",
 	"main": "Node/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
