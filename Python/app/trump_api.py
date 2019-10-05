@@ -28,9 +28,6 @@ def get_trump_count():
 #Wordcloud API    
 @app.route('/trump_wc')
 def trump_wc():
-#    file_mod_time = round(os.stat('/trump_wc.png').st_mtime)
-#    last_time = round((int(time.time()) - file_mod_time) / 60, 2)
-#    if last_time>(60*24):
     ta.trump_wc(twitter) 
     return send_file('trump_wc.png', mimetype='image/png')
 
